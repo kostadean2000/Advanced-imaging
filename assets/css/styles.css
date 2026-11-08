@@ -153,6 +153,15 @@ input:focus, select:focus, textarea:focus { outline: 3px solid rgba(28,156,196,.
 .contact-list li { padding: 14px 0; border-bottom: 1px solid var(--line); }
 .contact-list strong { display: block; color: var(--navy); }
 
+/* Profile */
+.profile-photo { margin: 0; }
+.profile-photo img { width: 100%; border-radius: 16px; box-shadow: var(--shadow); }
+.profile-photo figcaption { font-size: .9rem; color: var(--muted); margin-top: 10px; text-align: center; }
+.credential-list { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 12px; }
+.credential-list li { display: flex; gap: 14px; align-items: center; background: var(--bg-alt); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 18px; }
+.credential-list strong { font-family: "Montserrat", sans-serif; color: var(--navy); min-width: 84px; }
+.credential-list span { color: var(--muted); font-size: 1rem; }
+
 /* Footer */
 .site-footer { background: var(--navy-900); color: #b8cadb; padding: 60px 0 26px; font-size: .98rem; }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 36px; }
