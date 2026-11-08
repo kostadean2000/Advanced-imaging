@@ -33,12 +33,9 @@ PAGES = [
     ("services", "services.html", "Services",
      "SPECT/CT, PET/CT & Nuclear Medicine Equipment Services | Advanced Imaging",
      "Equipment planning, acquisition, upgrades, site readiness and workflow optimization for SPECT/CT, PET/CT and gamma camera programs. Free consultation."),
-    ("meet-dean", "meet-dean.html", "Meet Dean",
-     "Dean Kefalas, CNMT, ARRT(N) | Nuclear Medicine Technologist | Advanced Imaging",
-     "Meet Dean Kefalas, CNMT, ARRT(N): Loma Linda University Nuclear Medicine Technology graduate and 2026 Highest Academic Achievement Award recipient."),
     ("about", "about.html", "About",
-     "About Dean Kefalas & Advanced Imaging | Molecular Imaging Expertise",
-     "Meet Dean Kefalas and Advanced Imaging, a trusted partner for hospitals and imaging centers building Nuclear Medicine, SPECT/CT and PET/CT programs."),
+     "About Dean Kefalas, R.T.(N)(CT)(ARRT), CNMT | Advanced Imaging",
+     "Dean Kefalas, R.T.(N)(CT)(ARRT), CNMT: Loma Linda University Nuclear Medicine Technology graduate with hands-on SPECT/CT, PET/CT and CT experience."),
     ("faq", "faq.html", "FAQ",
      "Nuclear Medicine & PET/CT Equipment FAQ | Advanced Imaging",
      "Answers to common questions from hospitals and imaging clinics about SPECT/CT and PET/CT acquisition, upgrades, site planning, timelines and consultations."),
@@ -95,7 +92,6 @@ def footer(active=""):
       <div>
         <h2>Company</h2>
         <ul>
-          <li><a href="meet-dean.html">Meet Dean</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="contact.html">Free Consultation</a></li>

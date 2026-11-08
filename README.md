@@ -1,8 +1,8 @@
 # Advanced Imaging website
 
-Static 6-page lead-generation site for Advanced Imaging (Nuclear Medicine, SPECT/CT, PET/CT) aimed at hospitals and imaging clinics.
+Static 5-page lead-generation site for Advanced Imaging (Nuclear Medicine, SPECT/CT, PET/CT) aimed at hospitals and imaging clinics.
 
-Pages: `index.html` (Home), `services.html`, `meet-dean.html` (Dean's education, experience & equipment), `about.html`, `faq.html`, `contact.html` (free consultation form).
+Pages: `index.html` (Home), `services.html`, `about.html` (Dean's photo, credentials, experience & equipment), `faq.html`, `contact.html` (free consultation form).
 
 ## Editing
 - Page content lives in `pages/*.html`. Shared header, footer, meta tags and structured data live in `build.py`.

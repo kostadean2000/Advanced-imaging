@@ -2,9 +2,9 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Dean Kefalas",
-  "jobTitle": "Nuclear Medicine Technologist",
+  "jobTitle": "Nuclear Medicine and CT Technologist",
   "image": "{{url}}/assets/img/dean-kefalas.jpg",
-  "url": "{{url}}/meet-dean.html",
+  "url": "{{url}}/about.html",
   "sameAs": [
     "https://www.linkedin.com/in/dean-kefalas"
   ],
@@ -20,24 +20,25 @@
   "hasCredential": [
     {
       "@type": "EducationalOccupationalCredential",
-      "name": "CNMT, Certified Nuclear Medicine Technologist",
+      "name": "R.T.(N)(CT)(ARRT), Registered Technologist in Nuclear Medicine and Computed Tomography",
       "recognizedBy": {
         "@type": "Organization",
-        "name": "Nuclear Medicine Technology Certification Board"
+        "name": "American Registry of Radiologic Technologists"
       }
     },
     {
       "@type": "EducationalOccupationalCredential",
-      "name": "ARRT(N), Nuclear Medicine",
+      "name": "CNMT, Certified Nuclear Medicine Technologist",
       "recognizedBy": {
         "@type": "Organization",
-        "name": "American Registry of Radiologic Technologists"
+        "name": "Nuclear Medicine Technology Certification Board"
       }
     }
   ],
   "knowsAbout": [
     "Nuclear Medicine",
     "SPECT/CT",
-    "PET/CT"
+    "PET/CT",
+    "Computed Tomography"
   ]
 }
