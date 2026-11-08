@@ -13,4 +13,6 @@ Pages: `index.html` (Home), `services.html`, `about.html` (Dean's photo, credent
 ## SEO
 One H1 per page with keyword-focused H2s, unique titles and meta descriptions, canonical and Open Graph tags, JSON-LD (ProfessionalService, BreadcrumbList, FAQPage), `sitemap.xml` and `robots.txt`.
 
+To paste the site into a web builder (Squarespace, Wix, WordPress, Webflow…), run `python3 export_builder.py` and follow `web-builder/HOW-TO-PASTE.md`.
+
 Deploy by uploading the repo root to any static host (GitHub Pages, Netlify, etc.).
