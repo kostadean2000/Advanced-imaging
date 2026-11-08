@@ -15,6 +15,8 @@
 4. Hide the builder's own header and footer on these pages. Each block already includes the Advanced Imaging menu and footer.
 5. Copy the **SEO title** and **SEO description** from the comment at the top of each HTML file into that page's SEO settings.
 
+**Using GoHighLevel?** Use the `gohighlevel/` folder instead. See `gohighlevel/README.md` or open `gohighlevel/copy-paste.html`.
+
 ## Good to know
 - Images (logo and photo) are embedded directly in the HTML, so there's nothing to upload. Any images you upload to the builder later can replace them.
 - If your page URLs differ, edit `ROUTES` in `export_builder.py` and run `python3 build.py && python3 export_builder.py`, or find-and-replace the `href="/…"` links.
