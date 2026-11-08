@@ -1,0 +1,77 @@
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Free Consultation</div>
+    <h1>Book Your Free Nuclear Medicine, SPECT/CT or PET/CT Consultation</h1>
+    <p>Tell us about your facility and goals. Dean will follow up within one business day to schedule a time that works for your team.</p>
+  </div>
+</section>
+
+<section aria-labelledby="form-title">
+  <div class="container split" style="align-items:start">
+    <div class="form-wrap">
+      <h2 id="form-title">Request Your Free Consultation</h2>
+      <form id="consult-form" data-mailto="{{email}}" data-endpoint="{{form_endpoint}}" novalidate>
+        <div class="form-grid">
+          <div><label for="name">Full name *</label><input id="name" name="name" autocomplete="name" required></div>
+          <div><label for="title">Job title</label><input id="title" name="title" autocomplete="organization-title"></div>
+          <div class="full"><label for="organization">Hospital / clinic name *</label><input id="organization" name="organization" autocomplete="organization" required></div>
+          <div><label for="email">Work email *</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+          <div><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+          <div>
+            <label for="facility">Facility type *</label>
+            <select id="facility" name="facility" required>
+              <option value="">Select one</option>
+              <option>Hospital / health system</option>
+              <option>Academic medical center</option>
+              <option>Outpatient imaging center</option>
+              <option>Cardiology practice</option>
+              <option>Oncology practice</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div>
+            <label for="timeline">Project timeline *</label>
+            <select id="timeline" name="timeline" required>
+              <option value="">Select one</option>
+              <option>0–3 months</option>
+              <option>3–6 months</option>
+              <option>6–12 months</option>
+              <option>12+ months</option>
+              <option>Just exploring</option>
+            </select>
+          </div>
+          <fieldset class="full" style="border:0;padding:0;margin:0">
+            <legend style="font-weight:700;color:var(--navy);margin-bottom:8px;font-size:.95rem">I'm interested in</legend>
+            <div class="checkbox-row">
+              <label><input type="checkbox" name="interest" value="SPECT/CT"> SPECT/CT</label>
+              <label><input type="checkbox" name="interest" value="PET/CT"> PET/CT</label>
+              <label><input type="checkbox" name="interest" value="Nuclear Medicine / Gamma Camera"> Gamma camera</label>
+              <label><input type="checkbox" name="interest" value="Upgrade / Replacement"> Upgrade / replacement</label>
+              <label><input type="checkbox" name="interest" value="New Program"> New program</label>
+            </div>
+          </fieldset>
+          <div class="full"><label for="message">Tell us about your project</label><textarea id="message" name="message" rows="5" placeholder="Current equipment, patient volumes, goals, questions..."></textarea></div>
+        </div>
+        <p style="margin-top:20px"><button class="btn btn-cta" type="submit">Request My Free Consultation</button></p>
+        <p class="form-note">No cost, no obligation. Your information is only used to respond to your request.</p>
+        <div id="form-success" class="form-success" role="status">Thank you! Your request has been prepared. We'll be in touch within one business day.</div>
+      </form>
+    </div>
+    <div>
+      <h2>What to Expect From Your Consultation</h2>
+      <ul class="checklist">
+        <li>A 30-minute conversation about your department, equipment and goals</li>
+        <li>An honest view of your SPECT/CT, PET/CT or nuclear medicine options</li>
+        <li>Clear next steps, timelines and budget considerations</li>
+        <li>No pressure, no cost and no obligation</li>
+      </ul>
+      <h2>Prefer to Reach Out Directly?</h2>
+      <ul class="contact-list">
+        <li><strong>Phone</strong><a href="tel:{{phone_href}}">{{phone}}</a></li>
+        <li><strong>Email</strong><a href="mailto:{{email}}">{{email}}</a></li>
+        <li><strong>LinkedIn</strong><a href="{{linkedin}}" target="_blank" rel="noopener">Dean Kefalas</a></li>
+        <li><strong>Service area</strong>Hospitals &amp; imaging clinics across the {{region}}</li>
+      </ul>
+    </div>
+  </div>
+</section>

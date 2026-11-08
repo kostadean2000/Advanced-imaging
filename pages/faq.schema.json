@@ -1,0 +1,70 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does Advanced Imaging do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Advanced Imaging helps hospitals and imaging clinics plan, acquire, upgrade and optimize Nuclear Medicine, SPECT/CT and PET/CT equipment, from the first needs assessment through installation and go-live."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who do you work with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We work with hospitals, health systems, academic medical centers, outpatient imaging centers, and cardiology and oncology practices that offer or are planning molecular imaging services."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the consultation really free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The initial consultation is free and carries no obligation. It is a conversation about your department, current equipment and goals, followed by clear recommendations and next steps."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between SPECT/CT and PET/CT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both are hybrid imaging methods that combine functional nuclear imaging with CT anatomy. SPECT/CT uses gamma-emitting tracers and is widely used for cardiac, bone, thyroid and general nuclear medicine studies. PET/CT uses positron-emitting tracers and is central to oncology staging and treatment response, as well as cardiac and neurological imaging."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should we upgrade our existing gamma camera or replace it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the age and support status of your system, your study volumes, and your clinical goals. We compare upgrade paths against replacement options, including total cost of ownership, so you can make the right call for your department."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a SPECT/CT or PET/CT project take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Timelines vary with site readiness, shielding, construction and delivery schedules. Many projects take several months from decision to first patient. We help you build a realistic plan and coordinate each step to keep it on track."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you help with site planning and shielding?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We coordinate room layout, shielding, power and HVAC requirements with your facilities team, physicist and contractors so the room is ready when the system arrives."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get started?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Book a free consultation using our online form, or call or email us directly. We will follow up within one business day to schedule a time that works for your team."
+      }
+    }
+  ]
+}
