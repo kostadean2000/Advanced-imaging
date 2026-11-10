@@ -1,0 +1,69 @@
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="container">
+    <span class="eyebrow">Free, No-Obligation</span>
+    <h1 id="page-title">Book Your Free Pet Grooming Consultation</h1>
+    <p class="lead">Tell us a little about your dog or cat and we'll reach out to schedule your free meet &amp; greet, usually within one business day. You'll leave with a custom grooming plan and an exact quote.</p>
+  </div>
+</section>
+
+<section aria-labelledby="form-title">
+  <div class="container split" style="align-items:start">
+    <div class="card">
+      <h2 id="form-title">Request Your Free Consultation</h2>
+      <form id="consult-form" data-mailto="{{email}}" data-endpoint="{{form_endpoint}}" novalidate>
+        <div class="form-grid">
+          <div><label for="name">Your name *</label><input id="name" name="name" autocomplete="name" required></div>
+          <div><label for="phone">Phone *</label><input id="phone" name="phone" type="tel" autocomplete="tel" required></div>
+          <div class="full"><label for="email">Email *</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+          <div><label for="pet_name">Pet's name *</label><input id="pet_name" name="pet_name" required></div>
+          <div><label for="pet_type">Pet type *</label>
+            <select id="pet_type" name="pet_type" required>
+              <option value="">Choose one</option><option>Dog</option><option>Cat</option><option>Puppy</option><option>Kitten</option><option>Multiple pets</option>
+            </select></div>
+          <div class="full"><label for="breed">Breed &amp; approximate weight</label><input id="breed" name="breed" placeholder="e.g. Goldendoodle, 45 lbs"></div>
+          <fieldset class="full">
+            <legend style="font-weight:700;margin-bottom:8px">Services you're interested in</legend>
+            <div class="chips">
+              <label><input type="checkbox" name="interest" value="Full groom"> Full groom</label>
+              <label><input type="checkbox" name="interest" value="Bath &amp; tidy"> Bath &amp; tidy</label>
+              <label><input type="checkbox" name="interest" value="Cat grooming"> Cat grooming</label>
+              <label><input type="checkbox" name="interest" value="Puppy/kitten intro"> Puppy/kitten intro</label>
+              <label><input type="checkbox" name="interest" value="Nail trim"> Nail trim</label>
+              <label><input type="checkbox" name="interest" value="De-shedding"> De-shedding</label>
+            </div>
+          </fieldset>
+          <div><label for="preferred">Preferred day / time</label><input id="preferred" name="preferred" placeholder="e.g. Saturday morning"></div>
+          <div><label for="source">How did you hear about us?</label>
+            <select id="source" name="source"><option value="">Choose one</option><option>Google search</option><option>Friend or family</option><option>Social media</option><option>Vet referral</option><option>Drove by</option><option>Other</option></select></div>
+          <div class="full"><label for="message">Anything we should know? (anxiety, health, matting, style)</label><textarea id="message" name="message" rows="4"></textarea></div>
+          <div class="full"><button class="btn btn-cta" type="submit" style="width:100%">Request My Free Consultation</button></div>
+        </div>
+        <p class="form-note">No cost, no obligation. We'll only use your details to arrange your appointment.</p>
+        <p id="form-success" role="status">Thank you! We've received your request and will contact you shortly to schedule your free consultation.</p>
+      </form>
+    </div>
+    <div class="contact-aside">
+      <div class="card">
+        <h2 style="font-size:1.4rem">What to Expect at Your Free Consultation</h2>
+        <ul class="checklist">
+          <li>A friendly meet &amp; greet with your groomer</li>
+          <li>A quick coat, skin, nail and ear check</li>
+          <li>Recommendations tailored to your pet's breed and lifestyle</li>
+          <li>An exact price quote before you book</li>
+          <li>First-appointment scheduling at a time that suits you</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2 style="font-size:1.4rem">Prefer to Call or Visit?</h2>
+        <address>
+          <strong>Wags to Whiskers</strong><br>
+          {{street}}<br>{{city}}, {{state}} {{zip}}<br>
+          Phone: <a href="tel:{{phone_href}}">{{phone}}</a><br>
+          Email: <a href="mailto:{{email}}">{{email}}</a><br>
+          Hours: {{hours}}
+        </address>
+        <div class="actions"><a class="btn btn-cta" href="tel:{{phone_href}}">Call Now</a></div>
+      </div>
+    </div>
+  </div>
+</section>
