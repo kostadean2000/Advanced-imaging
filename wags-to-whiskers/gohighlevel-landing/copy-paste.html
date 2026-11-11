@@ -1,0 +1,514 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wags to Whiskers GHL Blocks</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;600;700&family=JetBrains+Mono:wght@400&display=swap">
+<style>
+/* Layout: one narrow column of numbered paste steps, each with its code and a Copy button */
+:root{--bg:#f6faf9;--surface:#ffffff;--fg:#1f2a2e;--muted:#56666a;--line:#d9e4e2;--accent:#0f6e6e;--accent-fg:#ffffff;--sun:#f2a541;--code-bg:#f0f5f4;
+  --display:"Fredoka",system-ui,sans-serif;--text:"Nunito",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0f1a1b;--surface:#162426;--fg:#e4eeec;--muted:#9fb3b0;--line:#26393b;--accent:#4fb8ad;--accent-fg:#0b1414;--sun:#f2a541;--code-bg:#0b1415;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1a1b;--surface:#162426;--fg:#e4eeec;--muted:#9fb3b0;--line:#26393b;--accent:#4fb8ad;--accent-fg:#0b1414;--sun:#f2a541;--code-bg:#0b1415;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 var(--text)}
+.wrap{max-width:900px;margin:0 auto;padding-block:40px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:20px}
+h1,h2{font-family:var(--display);font-weight:600;text-wrap:balance;margin:0}
+h1{font-size:clamp(1.6rem,4vw,2.2rem);color:var(--accent)}
+.intro p{margin:.4em 0 0;color:var(--muted);max-width:65ch}
+.step,.note{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
+.step-head{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:start}
+.step-text{min-width:0}
+.num{width:34px;height:34px;border-radius:50%;background:var(--sun);color:#1f2a2e;display:grid;place-items:center;font-family:var(--display);font-weight:600}
+h2{font-size:1.2rem}
+.file{font:400 .78rem var(--mono);color:var(--muted);margin-left:6px;white-space:nowrap}
+.step-text p{margin:.3em 0 0;color:var(--muted)}
+.step-text b{color:var(--fg)}
+.copy{font:600 .95rem var(--display);background:var(--accent);color:var(--accent-fg);border:0;border-radius:999px;padding:10px 18px;cursor:pointer;white-space:nowrap}
+.copy:focus-visible,textarea:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.copy.done{background:var(--sun);color:#1f2a2e}
+textarea{width:100%;height:220px;margin-top:14px;font:12.5px/1.5 var(--mono);color:var(--fg);background:var(--code-bg);border:1px solid var(--line);border-radius:10px;padding:12px;resize:vertical;white-space:pre;overflow:auto}
+.note h2{font-size:1.05rem;margin-bottom:.4em}
+.note ul{margin:0;padding-left:1.2em;color:var(--muted);display:grid;gap:6px}
+.note b{color:var(--fg)}
+code{font:.88em var(--mono)}
+@media (max-width:600px){.step-head{grid-template-columns:auto 1fr}.copy{grid-column:1/-1;width:100%}}
+@media (prefers-reduced-motion:no-preference){.copy{transition:background .15s}}
+</style>
+</head><body>
+<main class="wrap">
+  <header class="intro">
+    <h1>Wags to Whiskers landing page for GoHighLevel</h1>
+    <p>Three blocks: CSS, HTML and JS. Paste them in order, then publish. Photos load from the web, so there's nothing to upload.</p>
+  </header>
+  <section class="step" aria-labelledby="h-css">
+  <div class="step-head">
+    <span class="num" aria-hidden="true">1</span>
+    <div class="step-text"><h2 id="h-css">Custom CSS <span class="file">1-custom-css.css &middot; 15 KB</span></h2><p>In your funnel or website, open the landing page's <b>Settings</b> (gear icon) and choose <b>Custom CSS</b>. Paste it in as-is. No &lt;style&gt; tags are needed.</p></div>
+    <button type="button" class="copy" data-target="t-css">Copy Custom CSS</button>
+  </div>
+  <textarea id="t-css" readonly spellcheck="false" aria-label="Custom CSS code">/* Wags to Whiskers landing page | GoHighLevel Custom CSS | every rule is scoped to .wtw-lp */
+.wtw-lp { width:100%; overflow-x:clip; }
+.wtw-lp h1, .wtw-lp h2, .wtw-lp h3 { letter-spacing:normal; text-transform:none; }
+.wtw-lp ul { margin-top:0; }
+.wtw-lp { --wtw-teal:#0f6e6e; --wtw-teal-dark:#0a4f4f; --wtw-teal-soft:#e3f2f0;
+  --wtw-sun:#f2a541; --wtw-sun-dark:#d9861c; --wtw-cream:#fff8ef;
+  --wtw-ink:#1f2a2e; --wtw-muted:#5a6a6e; --wtw-line:#e6e0d6; --wtw-white:#fff;
+  --wtw-radius:18px; --wtw-shadow:0 10px 30px rgba(15,60,60,.10);
+  --wtw-head:&quot;Fredoka&quot;,system-ui,sans-serif; --wtw-body:&quot;Nunito&quot;,system-ui,sans-serif; }
+.wtw-lp, .wtw-lp * { box-sizing:border-box }
+html { scroll-behavior:smooth }
+.wtw-lp { margin:0;font-family:var(--wtw-body);font-size:17px;line-height:1.65;color:var(--wtw-ink);background:var(--wtw-white) }
+.wtw-lp img { max-width:100%;height:auto;display:block }
+.wtw-lp a { color:var(--wtw-teal) }
+.wtw-lp h1, .wtw-lp h2, .wtw-lp h3 { font-family:var(--wtw-head);line-height:1.2;margin:0 0 .6em;color:var(--wtw-teal-dark) }
+.wtw-lp h1 { font-size:clamp(2rem,4.5vw,3.2rem) }
+.wtw-lp h2 { font-size:clamp(1.6rem,3vw,2.3rem) }
+.wtw-lp h3 { font-size:1.25rem }
+.wtw-lp p { margin:0 0 1em }
+.wtw-lp .container { width:min(1140px,100% - 32px);margin-inline:auto }
+.wtw-lp section { padding:72px 0 }
+.wtw-lp .section-alt { background:var(--wtw-cream) }
+.wtw-lp .skip-link { position:absolute;left:-999px;top:0;background:var(--wtw-ink);color:#fff;padding:8px 14px;z-index:100 }
+.wtw-lp .skip-link:focus { left:8px }
+.wtw-lp .eyebrow { display:inline-block;font-weight:700;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--wtw-sun-dark);margin-bottom:.6em }
+.wtw-lp .lead { font-size:1.15rem;color:var(--wtw-muted) }
+.wtw-lp .btn { display:inline-block;font-family:var(--wtw-head);font-weight:600;font-size:1.02rem;text-decoration:none;padding:14px 26px;border-radius:999px;border:2px solid transparent;transition:transform .15s,background .15s;text-align:center;cursor:pointer }
+.wtw-lp .btn:hover { transform:translateY(-2px) }
+.wtw-lp .btn-cta { background:var(--wtw-sun);color:var(--wtw-ink) }
+.wtw-lp .btn-cta:hover { background:var(--wtw-sun-dark);color:var(--wtw-ink) }
+.wtw-lp .btn-outline { border-color:var(--wtw-teal);color:var(--wtw-teal);background:transparent }
+.wtw-lp .btn-outline:hover { background:var(--wtw-teal);color:#fff }
+.wtw-lp .btn-light { border-color:#fff;color:#fff }
+.wtw-lp .btn-light:hover { background:#fff;color:var(--wtw-teal-dark) }
+.wtw-lp .actions { display:flex;flex-wrap:wrap;gap:12px;margin-top:1.4em }
+.wtw-lp .topbar { background:var(--wtw-teal-dark);color:#e8f4f2;font-size:.9rem }
+.wtw-lp .topbar-inner { display:flex;justify-content:space-between;gap:12px;padding:6px 0 }
+.wtw-lp .topbar a { color:#fff;font-weight:700;text-decoration:none }
+.wtw-lp .site-header { position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);border-bottom:1px solid var(--wtw-line);backdrop-filter:blur(6px) }
+.wtw-lp .header-inner { display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0 }
+.wtw-lp .brand { display:flex;align-items:center;gap:10px;text-decoration:none }
+.wtw-lp .brand-text { display:flex;flex-direction:column;line-height:1.1 }
+.wtw-lp .brand-name { font-family:var(--wtw-head);font-weight:700;font-size:1.35rem;color:var(--wtw-teal-dark) }
+.wtw-lp .brand-tag { font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--wtw-sun-dark);font-weight:700 }
+.wtw-lp .nav ul { list-style:none;margin:0;padding:0;display:flex;align-items:center;gap:22px }
+.wtw-lp .nav a { text-decoration:none;color:var(--wtw-ink);font-weight:700 }
+.wtw-lp .nav a[aria-current=&quot;page&quot;] { color:var(--wtw-teal);box-shadow:inset 0 -3px 0 var(--wtw-sun) }
+.wtw-lp .nav .btn { padding:10px 20px;color:var(--wtw-ink) }
+.wtw-lp .nav-toggle { display:none;background:none;border:0;padding:8px;cursor:pointer }
+.wtw-lp .nav-toggle span { display:block;width:24px;height:3px;margin:4px 0;background:var(--wtw-teal-dark);border-radius:2px }
+.wtw-lp .hero { background:linear-gradient(135deg,var(--wtw-teal) 0%,var(--wtw-teal-dark) 100%);color:#fff;padding:80px 0 88px;position:relative;overflow:hidden }
+.wtw-lp .hero::after { content:&quot;&quot;;position:absolute;right:-80px;bottom:-80px;width:340px;height:340px;background:url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJXYWdzIHRvIFdoaXNrZXJzIHBhdyBsb2dvIj48Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSIzMSIgZmlsbD0iIzBmNmU2ZSIvPjxnIGZpbGw9IiNmZmYiPjxlbGxpcHNlIGN4PSIzMiIgY3k9IjQwIiByeD0iMTIiIHJ5PSIxMCIvPjxlbGxpcHNlIGN4PSIxOCIgY3k9IjI3IiByeD0iNSIgcnk9IjYuNSIvPjxlbGxpcHNlIGN4PSIyNyIgY3k9IjE5IiByeD0iNSIgcnk9IjYuNSIvPjxlbGxpcHNlIGN4PSIzNyIgY3k9IjE5IiByeD0iNSIgcnk9IjYuNSIvPjxlbGxpcHNlIGN4PSI0NiIgY3k9IjI3IiByeD0iNSIgcnk9IjYuNSIvPjwvZz48cGF0aCBkPSJNMjYgNDFoMTJNMjggNDVoOCIgc3Ryb2tlPSIjZjJhNTQxIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PC9zdmc+Cg==&quot;) center/contain no-repeat;opacity:.08 }
+.wtw-lp .hero h1 { color:#fff }
+.wtw-lp .hero .lead { color:#d9eeeb }
+.wtw-lp .hero-grid { display:grid;grid-template-columns:1.25fr .9fr;gap:48px;align-items:center;position:relative;z-index:1 }
+.wtw-lp .hero-card { background:#fff;color:var(--wtw-ink);border-radius:var(--wtw-radius);padding:30px;box-shadow:var(--wtw-shadow) }
+.wtw-lp .hero-card h2 { font-size:1.35rem }
+.wtw-lp .page-hero { background:var(--wtw-teal-soft);padding:64px 0 56px }
+.wtw-lp .page-hero .lead { max-width:760px }
+.wtw-lp .trust { background:var(--wtw-sun);padding:16px 0 }
+.wtw-lp .trust ul { list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 36px;font-weight:700;font-family:var(--wtw-head) }
+.wtw-lp .section-head { max-width:760px;margin-bottom:40px }
+.wtw-lp .center { text-align:center;margin-inline:auto }
+.wtw-lp .grid { display:grid;gap:24px }
+.wtw-lp .grid-2 { grid-template-columns:repeat(2,1fr) }
+.wtw-lp .grid-3 { grid-template-columns:repeat(3,1fr) }
+.wtw-lp .grid-4 { grid-template-columns:repeat(4,1fr) }
+.wtw-lp .split { display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center }
+.wtw-lp .card { background:#fff;border:1px solid var(--wtw-line);border-radius:var(--wtw-radius);padding:28px;box-shadow:0 4px 14px rgba(0,0,0,.04) }
+.wtw-lp .card .icon { width:54px;height:54px;border-radius:50%;background:var(--wtw-teal-soft);display:grid;place-items:center;margin-bottom:14px }
+.wtw-lp .card .icon svg { width:28px;height:28px;fill:var(--wtw-teal) }
+.wtw-lp .card .more { font-weight:700;text-decoration:none }
+.wtw-lp .checklist { list-style:none;padding:0;margin:0 0 1.4em }
+.wtw-lp .checklist li { padding-left:32px;position:relative;margin-bottom:.6em }
+.wtw-lp .checklist li::before { content:&quot;&quot;;position:absolute;left:0;top:.35em;width:20px;height:20px;border-radius:50%;background:var(--wtw-teal) url(&quot;data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 20 20&#x27;%3E%3Cpath d=&#x27;M5 10.5l3 3 7-7&#x27; stroke=&#x27;%23fff&#x27; stroke-width=&#x27;2.4&#x27; fill=&#x27;none&#x27; stroke-linecap=&#x27;round&#x27;/%3E%3C/svg%3E&quot;) center/14px no-repeat }
+.wtw-lp .hero-card .checklist li::before { background-color:var(--wtw-sun) }
+.wtw-lp .stat { text-align:center;padding:24px;border-radius:var(--wtw-radius);background:#fff;border:1px solid var(--wtw-line) }
+.wtw-lp .stat strong { display:block;font-family:var(--wtw-head);font-size:2.2rem;color:var(--wtw-teal) }
+.wtw-lp .steps { counter-reset:step }
+.wtw-lp .step { position:relative;padding-top:64px }
+.wtw-lp .step::before { counter-increment:step;content:counter(step);position:absolute;top:0;left:28px;width:46px;height:46px;border-radius:50%;background:var(--wtw-sun);font-family:var(--wtw-head);font-weight:700;font-size:1.3rem;display:grid;place-items:center }
+.wtw-lp .step.card { padding-top:84px }
+.wtw-lp .quote { font-style:italic }
+.wtw-lp .quote footer { font-style:normal;font-weight:700;color:var(--wtw-teal-dark);margin-top:.6em }
+.wtw-lp .stars { color:var(--wtw-sun-dark);letter-spacing:2px;font-size:1.1rem }
+.wtw-lp .cta-band { background:linear-gradient(135deg,var(--wtw-teal) 0%,var(--wtw-teal-dark) 100%);color:#fff;text-align:center }
+.wtw-lp .cta-band h2 { color:#fff }
+.wtw-lp .cta-band p { color:#d9eeeb;max-width:680px;margin-inline:auto }
+.wtw-lp .cta-band .actions { justify-content:center }
+.wtw-lp .service-block { scroll-margin-top:100px }
+.wtw-lp .service-block + .service-block { border-top:1px solid var(--wtw-line) }
+.wtw-lp .price-tag { display:inline-block;background:var(--wtw-teal-soft);color:var(--wtw-teal-dark);font-weight:700;padding:4px 14px;border-radius:999px;font-size:.92rem;margin-bottom:1em }
+.wtw-lp .addon-list { list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,1fr);gap:12px }
+.wtw-lp .addon-list li { background:#fff;border:1px solid var(--wtw-line);border-radius:12px;padding:14px 18px }
+.wtw-lp .addon-list strong { display:block;color:var(--wtw-teal-dark) }
+.wtw-lp .badge-row { display:flex;flex-wrap:wrap;gap:10px;margin:1em 0 }
+.wtw-lp .badge { background:var(--wtw-cream);border:1px solid var(--wtw-line);border-radius:999px;padding:6px 14px;font-weight:700;font-size:.9rem }
+.wtw-lp .faq details { border:1px solid var(--wtw-line);border-radius:14px;padding:4px 22px;margin-bottom:12px;background:#fff }
+.wtw-lp .faq summary { cursor:pointer;font-family:var(--wtw-head);font-weight:600;font-size:1.12rem;padding:14px 0;color:var(--wtw-teal-dark);list-style:none }
+.wtw-lp .faq summary::-webkit-details-marker { display:none }
+.wtw-lp .faq summary::after { content:&quot;+&quot;;float:right;font-size:1.4rem;color:var(--wtw-sun-dark) }
+.wtw-lp .faq details[open] summary::after { content:&quot;\2212&quot; }
+.wtw-lp .faq h3 { font-size:1.4rem;margin-top:1.6em }
+.wtw-lp .form-grid { display:grid;grid-template-columns:1fr 1fr;gap:16px }
+.wtw-lp .form-grid .full { grid-column:1/-1 }
+.wtw-lp label { display:block;font-weight:700;margin-bottom:6px }
+.wtw-lp input, .wtw-lp select, .wtw-lp textarea { width:100%;font:inherit;padding:12px 14px;border:1.5px solid var(--wtw-line);border-radius:12px;background:#fff }
+.wtw-lp input:focus, .wtw-lp select:focus, .wtw-lp textarea:focus { outline:3px solid rgba(242,165,65,.4);border-color:var(--wtw-sun-dark) }
+.wtw-lp fieldset { border:0;padding:0;margin:0 }
+.wtw-lp .chips { display:flex;flex-wrap:wrap;gap:10px }
+.wtw-lp .chips label { font-weight:600;display:flex;align-items:center;gap:6px;border:1.5px solid var(--wtw-line);border-radius:999px;padding:6px 14px;margin:0;cursor:pointer }
+.wtw-lp .chips input { width:auto }
+.wtw-lp .form-note { font-size:.9rem;color:var(--wtw-muted) }
+.wtw-lp #form-success { display:none;background:var(--wtw-teal-soft);border-radius:12px;padding:16px;margin-top:16px;font-weight:700 }
+.wtw-lp .contact-aside .card + .card { margin-top:20px }
+.wtw-lp address { font-style:normal }
+.wtw-lp .site-footer { background:#132b2b;color:#c9dcda;padding:56px 0 24px;font-size:.95rem }
+.wtw-lp .site-footer a { color:#fff }
+.wtw-lp .site-footer h2 { font-size:1.05rem;color:#fff }
+.wtw-lp .site-footer ul { list-style:none;padding:0;margin:0 }
+.wtw-lp .site-footer li { margin-bottom:.5em }
+.wtw-lp .footer-grid { display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:32px }
+.wtw-lp .footer-brand { font-family:var(--wtw-head);font-size:1.4rem;color:#fff;font-weight:700 }
+.wtw-lp .footer-bottom { display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;border-top:1px solid rgba(255,255,255,.12);margin-top:36px;padding-top:20px }
+.wtw-lp .mobile-cta { display:none }
+@media (max-width:900px) {
+  .wtw-lp .hero-grid, .wtw-lp .split, .wtw-lp .grid-3, .wtw-lp .grid-4, .wtw-lp .footer-grid { grid-template-columns:1fr 1fr }
+  .wtw-lp .hero-grid, .wtw-lp .split { grid-template-columns:1fr }
+}
+@media (max-width:760px) {
+  .wtw-lp { font-size:16px }
+  .wtw-lp section { padding:52px 0 }
+  .wtw-lp .nav-toggle { display:block }
+  .wtw-lp .nav { position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--wtw-line);display:none }
+  .wtw-lp .nav.open { display:block }
+  .wtw-lp .nav ul { flex-direction:column;align-items:stretch;padding:12px 16px 20px;gap:4px }
+  .wtw-lp .nav li a { display:block;padding:10px 4px }
+  .wtw-lp .nav .btn { margin-top:8px }
+  .wtw-lp .grid-2, .wtw-lp .grid-3, .wtw-lp .grid-4, .wtw-lp .footer-grid, .wtw-lp .form-grid, .wtw-lp .addon-list { grid-template-columns:1fr }
+  .wtw-lp .topbar span { display:none }
+  .wtw-lp .topbar-inner { justify-content:center }
+  .wtw-lp .mobile-cta { display:block;position:fixed;left:0;right:0;bottom:0;padding:10px 16px;background:rgba(255,255,255,.96);border-top:1px solid var(--wtw-line);z-index:60 }
+  .wtw-lp .mobile-cta .btn { display:block }
+  .wtw-lp { padding-bottom:72px }
+  .wtw-lp .hero { padding:56px 0 64px }
+}
+.wtw-lp .header-actions { display:flex;align-items:center;gap:16px }
+.wtw-lp .header-phone { font-weight:700;text-decoration:none;color:var(--wtw-teal-dark) }
+.wtw-lp .header-actions .btn { padding:10px 20px }
+.wtw-lp .photo-bg { position:relative;background-color:var(--wtw-teal-dark);background-position:center;background-size:cover;background-repeat:no-repeat;isolation:isolate }
+.wtw-lp .photo-bg::before { content:&quot;&quot;;position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(10,55,55,.88) 0%,rgba(10,55,55,.55) 55%,rgba(10,55,55,.25) 100%) }
+.wtw-lp .lp-hero { color:#fff;padding:120px 0 130px }
+.wtw-lp .lp-hero h1 { color:#fff;max-width:620px }
+.wtw-lp .lp-hero .lead { color:#e6f4f2;max-width:520px;font-size:1.25rem }
+.wtw-lp .lp-hero .eyebrow { color:var(--wtw-sun) }
+.wtw-lp .photo-card { border-radius:var(--wtw-radius);overflow:hidden;background:#fff;box-shadow:var(--wtw-shadow);border:1px solid var(--wtw-line) }
+.wtw-lp .photo-card img { width:100%;aspect-ratio:4/3;object-fit:cover }
+.wtw-lp .photo-card div { padding:18px 22px }
+.wtw-lp .photo-card h3 { margin-bottom:.2em }
+.wtw-lp .photo-card p { margin:0;color:var(--wtw-muted) }
+.wtw-lp .photo-band, .wtw-lp .cta-photo { color:#fff;text-align:center;padding:96px 0 }
+.wtw-lp .photo-band::before { background:rgba(10,55,55,.72) }
+.wtw-lp .cta-photo::before { background:rgba(8,40,42,.84) }
+.wtw-lp .photo-band h2, .wtw-lp .cta-photo h2 { color:#fff }
+.wtw-lp .cta-photo p { color:#e6f4f2;font-size:1.1rem }
+.wtw-lp .pill-list { list-style:none;padding:0;margin:24px 0 0;display:flex;flex-wrap:wrap;justify-content:center;gap:12px }
+.wtw-lp .pill-list li { background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:10px 20px;font-weight:700;backdrop-filter:blur(4px) }
+.wtw-lp .photo-soft { padding:96px 0 }
+.wtw-lp .photo-soft::before { background:linear-gradient(90deg,rgba(255,248,239,.15),rgba(10,55,55,.45)) }
+.wtw-lp .book-card { max-width:620px;margin-left:auto;box-shadow:0 20px 50px rgba(0,0,0,.25) }
+.wtw-lp .form-success { display:none;background:var(--wtw-teal-soft);border-radius:12px;padding:16px;margin-top:16px;font-weight:700 }
+@media (max-width:760px) {
+  .wtw-lp .header-phone { display:none }
+  .wtw-lp .header-actions .btn { white-space:nowrap;padding:9px 14px;font-size:.9rem }
+  .wtw-lp .brand img { width:40px;height:40px }
+  .wtw-lp .brand-name { font-size:1.1rem;white-space:nowrap }
+  .wtw-lp .lp-hero { padding:72px 0 80px }
+  .wtw-lp .photo-bg::before { background:rgba(10,55,55,.78) }
+  .wtw-lp .photo-soft::before { background:rgba(10,55,55,.35) }
+  .wtw-lp .photo-band, .wtw-lp .cta-photo, .wtw-lp .photo-soft { padding:64px 0 }
+}
+@media (max-width:480px) {
+  .wtw-lp .header-actions { display:none }
+}
+</textarea>
+</section>
+<section class="step" aria-labelledby="h-html">
+  <div class="step-head">
+    <span class="num" aria-hidden="true">2</span>
+    <div class="step-text"><h2 id="h-html">Custom HTML <span class="file">2-custom-html.html &middot; 10 KB</span></h2><p>In the page editor, add a <b>full-width section</b> with 0 padding, then a full-width row with 1 column. Drag in a <b>Custom JS/HTML</b> element (Elements > Custom JS/HTML), click <b>Open Code Editor</b>, paste and save.</p></div>
+    <button type="button" class="copy" data-target="t-html">Copy Custom HTML</button>
+  </div>
+  <textarea id="t-html" readonly spellcheck="false" aria-label="Custom HTML code">&lt;!-- Wags to Whiskers | landing page | GoHighLevel Custom JS/HTML element --&gt;
+&lt;!-- SEO title: Pet Grooming in Long Beach, CA | Book an Appointment --&gt;
+&lt;!-- SEO description: Voted Long Beach&#x27;s best groomer seven times. Dog &amp; cat grooming at Los Altos, Tue-Sat 8-5. Book your Wags to Whiskers grooming appointment today. --&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&amp;family=Nunito:wght@400;600;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;script type=&quot;application/ld+json&quot;&gt;{&quot;@context&quot;: &quot;https://schema.org&quot;, &quot;@type&quot;: [&quot;LocalBusiness&quot;, &quot;PetStore&quot;], &quot;additionalType&quot;: &quot;https://en.wikipedia.org/wiki/Pet_grooming&quot;, &quot;name&quot;: &quot;Wags to Whiskers&quot;, &quot;slogan&quot;: &quot;Because We Love Pets&quot;, &quot;url&quot;: &quot;https://www.wagsgrooming.com/&quot;, &quot;logo&quot;: &quot;https://www.wagsgrooming.com/assets/img/logo.svg&quot;, &quot;image&quot;: &quot;https://www.wagsgrooming.com/assets/img/logo.svg&quot;, &quot;email&quot;: &quot;eric@wagsgrooming.com&quot;, &quot;telephone&quot;: &quot;+15624305161&quot;, &quot;priceRange&quot;: &quot;$$&quot;, &quot;areaServed&quot;: [&quot;Long Beach, CA&quot;, &quot;Orange County, CA&quot;], &quot;address&quot;: {&quot;@type&quot;: &quot;PostalAddress&quot;, &quot;streetAddress&quot;: &quot;5505 E Stearns St&quot;, &quot;addressLocality&quot;: &quot;Long Beach&quot;, &quot;addressRegion&quot;: &quot;CA&quot;, &quot;postalCode&quot;: &quot;90815&quot;, &quot;addressCountry&quot;: &quot;US&quot;}, &quot;openingHours&quot;: [&quot;Tu-Sa 08:00-17:00&quot;], &quot;description&quot;: &quot;Professional dog and cat grooming: full grooms, baths, haircuts, nail trims, de-shedding and spa add-ons, with a free consultation for every new client.&quot;, &quot;makesOffer&quot;: {&quot;@type&quot;: &quot;Offer&quot;, &quot;name&quot;: &quot;Free Pet Grooming Consultation&quot;, &quot;price&quot;: &quot;0&quot;, &quot;priceCurrency&quot;: &quot;USD&quot;, &quot;url&quot;: &quot;https://www.wagsgrooming.com/contact.html&quot;}}&lt;/script&gt;
+&lt;script type=&quot;application/ld+json&quot;&gt;{&quot;@context&quot;: &quot;https://schema.org&quot;, &quot;@type&quot;: &quot;BreadcrumbList&quot;, &quot;itemListElement&quot;: [{&quot;@type&quot;: &quot;ListItem&quot;, &quot;position&quot;: 1, &quot;name&quot;: &quot;Home&quot;, &quot;item&quot;: &quot;https://www.wagsgrooming.com/&quot;}, {&quot;@type&quot;: &quot;ListItem&quot;, &quot;position&quot;: 2, &quot;name&quot;: &quot;Book an Appointment&quot;, &quot;item&quot;: &quot;https://www.wagsgrooming.com/landing.html&quot;}]}&lt;/script&gt;
+&lt;div class=&quot;wtw-lp&quot;&gt;
+&lt;a class=&quot;skip-link&quot; href=&quot;#main&quot;&gt;Skip to content&lt;/a&gt;
+&lt;header class=&quot;site-header&quot;&gt;
+  &lt;div class=&quot;container header-inner&quot;&gt;
+    &lt;a class=&quot;brand&quot; href=&quot;/&quot; aria-label=&quot;Wags to Whiskers home&quot;&gt;
+      &lt;img src=&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJXYWdzIHRvIFdoaXNrZXJzIHBhdyBsb2dvIj48Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSIzMSIgZmlsbD0iIzBmNmU2ZSIvPjxnIGZpbGw9IiNmZmYiPjxlbGxpcHNlIGN4PSIzMiIgY3k9IjQwIiByeD0iMTIiIHJ5PSIxMCIvPjxlbGxpcHNlIGN4PSIxOCIgY3k9IjI3IiByeD0iNSIgcnk9IjYuNSIvPjxlbGxpcHNlIGN4PSIyNyIgY3k9IjE5IiByeD0iNSIgcnk9IjYuNSIvPjxlbGxpcHNlIGN4PSIzNyIgY3k9IjE5IiByeD0iNSIgcnk9IjYuNSIvPjxlbGxpcHNlIGN4PSI0NiIgY3k9IjI3IiByeD0iNSIgcnk9IjYuNSIvPjwvZz48cGF0aCBkPSJNMjYgNDFoMTJNMjggNDVoOCIgc3Ryb2tlPSIjZjJhNTQxIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PC9zdmc+Cg==&quot; alt=&quot;Wags to Whiskers paw print logo&quot; width=&quot;48&quot; height=&quot;48&quot;&gt;
+      &lt;span class=&quot;brand-text&quot;&gt;&lt;span class=&quot;brand-name&quot;&gt;Wags to Whiskers&lt;/span&gt;&lt;span class=&quot;brand-tag&quot;&gt;Pet Grooming&lt;/span&gt;&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;div class=&quot;header-actions&quot;&gt;
+      &lt;a class=&quot;header-phone&quot; href=&quot;tel:+15624305161&quot;&gt;(562) 430-5161&lt;/a&gt;
+      &lt;a class=&quot;btn btn-cta&quot; href=&quot;#book&quot;&gt;Book Appointment&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+&lt;main id=&quot;main&quot;&gt;
+&lt;section class=&quot;lp-hero photo-bg&quot; style=&quot;background-image:url(https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=1600&amp;q=70&amp;auto=format&amp;fit=crop)&quot; aria-labelledby=&quot;hero-title&quot;&gt;
+  &lt;div class=&quot;container lp-hero-inner&quot;&gt;
+    &lt;span class=&quot;eyebrow&quot;&gt;Voted Best Groomer in Long Beach &amp;bull; 7 Times&lt;/span&gt;
+    &lt;h1 id=&quot;hero-title&quot;&gt;Pet Grooming in Long Beach Your Pet Will Love&lt;/h1&gt;
+    &lt;p class=&quot;lead&quot;&gt;Gentle, expert grooming for dogs and cats. Happy pets, every visit.&lt;/p&gt;
+    &lt;div class=&quot;actions&quot;&gt;
+      &lt;a class=&quot;btn btn-cta&quot; href=&quot;#book&quot;&gt;Book Appointment&lt;/a&gt;
+      &lt;a class=&quot;btn btn-light&quot; href=&quot;tel:+15624305161&quot;&gt;Call (562) 430-5161&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;div class=&quot;trust&quot; aria-label=&quot;Highlights&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&amp;#9733; Voted #1 in Long Beach, 7&amp;times;&lt;/li&gt;
+      &lt;li&gt;Dogs &amp;amp; Cats&lt;/li&gt;
+      &lt;li&gt;Tue&amp;ndash;Sat 8&amp;ndash;5&lt;/li&gt;
+      &lt;li&gt;Free Parking&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;section aria-labelledby=&quot;services-title&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;section-head center&quot;&gt;
+      &lt;h2 id=&quot;services-title&quot;&gt;Dog &amp;amp; Cat Grooming Services&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;grid grid-3&quot;&gt;
+      &lt;article class=&quot;photo-card&quot;&gt;
+        &lt;img src=&quot;https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=900&amp;q=70&amp;auto=format&amp;fit=crop&quot; alt=&quot;Happy beagle after a dog grooming appointment&quot; width=&quot;800&quot; height=&quot;600&quot; loading=&quot;lazy&quot;&gt;
+        &lt;div&gt;&lt;h3&gt;Dog Grooming&lt;/h3&gt;&lt;p&gt;Bath, haircut, nails &amp;amp; ears.&lt;/p&gt;&lt;/div&gt;
+      &lt;/article&gt;
+      &lt;article class=&quot;photo-card&quot;&gt;
+        &lt;img src=&quot;https://images.unsplash.com/photo-1574158622682-e40e69881006?w=900&amp;q=70&amp;auto=format&amp;fit=crop&quot; alt=&quot;Tabby cat with a clean, groomed coat&quot; width=&quot;800&quot; height=&quot;800&quot; loading=&quot;lazy&quot;&gt;
+        &lt;div&gt;&lt;h3&gt;Cat Grooming&lt;/h3&gt;&lt;p&gt;Calm, gentle, low-stress care.&lt;/p&gt;&lt;/div&gt;
+      &lt;/article&gt;
+      &lt;article class=&quot;photo-card&quot;&gt;
+        &lt;img src=&quot;https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?w=900&amp;q=70&amp;auto=format&amp;fit=crop&quot; alt=&quot;Corgi puppy ready for its first grooming visit&quot; width=&quot;800&quot; height=&quot;1207&quot; loading=&quot;lazy&quot;&gt;
+        &lt;div&gt;&lt;h3&gt;Puppy &amp;amp; Kitten Grooms&lt;/h3&gt;&lt;p&gt;A positive first visit.&lt;/p&gt;&lt;/div&gt;
+      &lt;/article&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;actions&quot; style=&quot;justify-content:center&quot;&gt;
+      &lt;a class=&quot;btn btn-cta&quot; href=&quot;#book&quot;&gt;Book Appointment&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;photo-bg photo-band&quot; style=&quot;background-image:url(https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1600&amp;q=70&amp;auto=format&amp;fit=crop)&quot; aria-labelledby=&quot;why-title&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;h2 id=&quot;why-title&quot;&gt;Why Long Beach Pet Parents Choose Us&lt;/h2&gt;
+    &lt;ul class=&quot;pill-list&quot;&gt;
+      &lt;li&gt;Friendly, experienced groomers&lt;/li&gt;
+      &lt;li&gt;Pet-safe shampoos&lt;/li&gt;
+      &lt;li&gt;All breeds &amp;amp; sizes&lt;/li&gt;
+      &lt;li&gt;Easy parking at Los Altos&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;actions&quot; style=&quot;justify-content:center&quot;&gt;
+      &lt;a class=&quot;btn btn-cta&quot; href=&quot;#book&quot;&gt;Book Appointment&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section id=&quot;book&quot; class=&quot;photo-bg photo-soft&quot; style=&quot;background-image:url(https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=1600&amp;q=70&amp;auto=format&amp;fit=crop)&quot; aria-labelledby=&quot;book-title&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;card book-card&quot;&gt;
+      &lt;h2 id=&quot;book-title&quot;&gt;Book Your Grooming Appointment&lt;/h2&gt;
+      &lt;p&gt;Send a request and we&#x27;ll call to confirm your time.&lt;/p&gt;
+      &lt;form id=&quot;booking-form&quot; class=&quot;js-lead-form&quot; data-subject=&quot;Grooming Appointment Request&quot; data-mailto=&quot;eric@wagsgrooming.com&quot; data-endpoint=&quot;&quot; novalidate&gt;
+        &lt;div class=&quot;form-grid&quot;&gt;
+          &lt;div&gt;&lt;label for=&quot;b-name&quot;&gt;Your name *&lt;/label&gt;&lt;input id=&quot;b-name&quot; name=&quot;name&quot; autocomplete=&quot;name&quot; required&gt;&lt;/div&gt;
+          &lt;div&gt;&lt;label for=&quot;b-phone&quot;&gt;Phone *&lt;/label&gt;&lt;input id=&quot;b-phone&quot; name=&quot;phone&quot; type=&quot;tel&quot; autocomplete=&quot;tel&quot; required&gt;&lt;/div&gt;
+          &lt;div&gt;&lt;label for=&quot;b-pet&quot;&gt;Pet&#x27;s name &amp;amp; breed *&lt;/label&gt;&lt;input id=&quot;b-pet&quot; name=&quot;pet&quot; placeholder=&quot;e.g. Max, Shih Tzu&quot; required&gt;&lt;/div&gt;
+          &lt;div&gt;&lt;label for=&quot;b-type&quot;&gt;Service *&lt;/label&gt;
+            &lt;select id=&quot;b-type&quot; name=&quot;service&quot; required&gt;
+              &lt;option value=&quot;&quot;&gt;Choose one&lt;/option&gt;&lt;option&gt;Dog grooming&lt;/option&gt;&lt;option&gt;Cat grooming&lt;/option&gt;&lt;option&gt;Puppy / kitten groom&lt;/option&gt;&lt;option&gt;Bath only&lt;/option&gt;&lt;option&gt;Nail trim&lt;/option&gt;
+            &lt;/select&gt;&lt;/div&gt;
+          &lt;div class=&quot;full&quot;&gt;&lt;label for=&quot;b-day&quot;&gt;Preferred day &amp;amp; time&lt;/label&gt;&lt;input id=&quot;b-day&quot; name=&quot;preferred&quot; placeholder=&quot;e.g. Saturday morning&quot;&gt;&lt;/div&gt;
+          &lt;div class=&quot;full&quot;&gt;&lt;button class=&quot;btn btn-cta&quot; type=&quot;submit&quot; style=&quot;width:100%&quot;&gt;Book Appointment&lt;/button&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;p class=&quot;form-note&quot;&gt;Prefer to call? &lt;a href=&quot;tel:+15624305161&quot;&gt;(562) 430-5161&lt;/a&gt;&lt;/p&gt;
+        &lt;p class=&quot;form-success&quot; role=&quot;status&quot;&gt;Thanks! We&#x27;ll call you shortly to confirm your appointment.&lt;/p&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;photo-bg cta-photo&quot; style=&quot;background-image:url(https://images.unsplash.com/photo-1517849845537-4d257902454a?w=900&amp;q=70&amp;auto=format&amp;fit=crop)&quot; aria-labelledby=&quot;visit-title&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;h2 id=&quot;visit-title&quot;&gt;Visit Us at Los Altos Shopping Center&lt;/h2&gt;
+    &lt;p&gt;5505 E Stearns St, Long Beach, CA 90815 &amp;bull; Tue&amp;ndash;Sat 8:00am&amp;ndash;5:00pm&lt;/p&gt;
+    &lt;div class=&quot;actions&quot; style=&quot;justify-content:center&quot;&gt;
+      &lt;a class=&quot;btn btn-cta&quot; href=&quot;#book&quot;&gt;Book Appointment&lt;/a&gt;
+      &lt;a class=&quot;btn btn-light&quot; href=&quot;https://www.google.com/maps/search/?api=1&amp;amp;query=5505+E+Stearns+St+Long+Beach+CA+90815&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Get Directions&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;/main&gt;
+&lt;footer class=&quot;site-footer&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;footer-grid&quot;&gt;
+      &lt;div&gt;
+        &lt;p class=&quot;footer-brand&quot;&gt;Wags to Whiskers&lt;/p&gt;
+        &lt;p&gt;Gentle, professional dog and cat grooming in Long Beach. Voted best groomer in Long Beach seven times.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+        &lt;h2&gt;Services&lt;/h2&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;/services#dog-grooming&quot;&gt;Dog Grooming&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/services#cat-grooming&quot;&gt;Cat Grooming&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/services#puppy&quot;&gt;Puppy &amp;amp; Kitten Intro&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/services#add-ons&quot;&gt;Spa Add-Ons&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+        &lt;h2&gt;Company&lt;/h2&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;/about&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/faq&quot;&gt;FAQ&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#book&quot;&gt;Book Appointment&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+        &lt;h2&gt;Visit Us&lt;/h2&gt;
+        &lt;address&gt;
+          5505 E Stearns St&lt;br&gt;Long Beach, CA 90815&lt;br&gt;
+          &lt;a href=&quot;tel:+15624305161&quot;&gt;(562) 430-5161&lt;/a&gt;&lt;br&gt;
+          &lt;a href=&quot;mailto:eric@wagsgrooming.com&quot;&gt;eric@wagsgrooming.com&lt;/a&gt;&lt;br&gt;
+          Tue&amp;ndash;Sat 8:00am&amp;ndash;5:00pm
+        &lt;/address&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;footer-bottom&quot;&gt;
+      &lt;span&gt;&amp;copy; &lt;span id=&quot;year&quot;&gt;2026&lt;/span&gt; Wags to Whiskers. All rights reserved.&lt;/span&gt;
+      &lt;span&gt;Because We Love Pets&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;
+&lt;div class=&quot;mobile-cta&quot;&gt;&lt;a class=&quot;btn btn-cta&quot; href=&quot;#book&quot;&gt;Book Appointment&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+</textarea>
+</section>
+<section class="step" aria-labelledby="h-js">
+  <div class="step-head">
+    <span class="num" aria-hidden="true">3</span>
+    <div class="step-text"><h2 id="h-js">Custom JS <span class="file">3-custom-js.html &middot; 3 KB</span></h2><p>Page <b>Settings</b> > <b>Tracking Code</b> > <b>Footer Code</b>. Paste as-is, script tags included. You can also paste it into a second Custom JS/HTML element below the first.</p></div>
+    <button type="button" class="copy" data-target="t-js">Copy Custom JS</button>
+  </div>
+  <textarea id="t-js" readonly spellcheck="false" aria-label="Custom JS code">&lt;!-- Wags to Whiskers | landing page | Footer tracking code --&gt;
+&lt;script&gt;
+// Wags to Whiskers site script.
+// Uses event delegation on the document so it keeps working when a page
+// builder (GoHighLevel, Squarespace, etc.) renders or re-renders the content
+// after this script has loaded.
+(function () {
+  if (window.__wagsInit) return;
+  window.__wagsInit = true;
+
+  // Mobile navigation toggle
+  document.addEventListener(&#x27;click&#x27;, function (e) {
+    var toggle = e.target.closest &amp;&amp; e.target.closest(&#x27;.nav-toggle&#x27;);
+    if (!toggle) return;
+    var nav = document.getElementById(&#x27;site-nav&#x27;);
+    if (!nav) return;
+    var open = nav.classList.toggle(&#x27;open&#x27;);
+    toggle.setAttribute(&#x27;aria-expanded&#x27;, open ? &#x27;true&#x27; : &#x27;false&#x27;);
+  });
+
+  // Footer year
+  function setYear() {
+    var y = document.getElementById(&#x27;year&#x27;);
+    if (y) y.textContent = new Date().getFullYear();
+  }
+  if (document.readyState === &#x27;loading&#x27;) document.addEventListener(&#x27;DOMContentLoaded&#x27;, setYear);
+  else setYear();
+  window.addEventListener(&#x27;load&#x27;, setYear);
+
+  // Lead forms (free consultation + book appointment)
+  // To send submissions to an inbox or CRM, set the form&#x27;s data-endpoint attribute
+  // to a form service or webhook URL (Formspree, a GoHighLevel inbound webhook,
+  // HubSpot, etc.). The fields are sent as JSON. Until then the form opens the
+  // visitor&#x27;s email app with the request pre-filled.
+  var LABELS = {
+    name: &#x27;Owner name&#x27;, email: &#x27;Email&#x27;, phone: &#x27;Phone&#x27;, pet: &quot;Pet&#x27;s name &amp; breed&quot;,
+    pet_name: &#x27;Pet name&#x27;, pet_type: &#x27;Pet type&#x27;, breed: &#x27;Breed / size&#x27;, service: &#x27;Service&#x27;,
+    interest: &#x27;Services of interest&#x27;, preferred: &#x27;Preferred day/time&#x27;,
+    source: &#x27;How did you hear about us&#x27;, message: &#x27;Notes&#x27;
+  };
+  document.addEventListener(&#x27;submit&#x27;, function (e) {
+    var form = e.target;
+    if (!form || !(form.id === &#x27;consult-form&#x27; || form.classList.contains(&#x27;js-lead-form&#x27;))) return;
+    e.preventDefault();
+    if (!form.reportValidity()) return;
+    var data = new FormData(form);
+    var success = form.querySelector(&#x27;#form-success, .form-success&#x27;);
+    var endpoint = form.getAttribute(&#x27;data-endpoint&#x27;);
+    var subject = form.getAttribute(&#x27;data-subject&#x27;) || &#x27;Free Grooming Consultation&#x27;;
+    var payload = {};
+    data.forEach(function (v, k) { payload[k] = payload[k] ? payload[k] + &#x27;, &#x27; + v : v; });
+    payload.form = subject;
+
+    if (endpoint) {
+      fetch(endpoint, {
+        method: &#x27;POST&#x27;,
+        body: JSON.stringify(payload),
+        headers: { &#x27;Content-Type&#x27;: &#x27;application/json&#x27;, Accept: &#x27;application/json&#x27; }
+      })
+        .then(function (r) {
+          if (!r.ok) throw new Error(&#x27;Request failed&#x27;);
+          form.reset();
+          if (success) success.style.display = &#x27;block&#x27;;
+        })
+        .catch(function () {
+          alert(&#x27;Sorry, something went wrong. Please call or email us directly.&#x27;);
+        });
+      return;
+    }
+
+    var lines = [];
+    Object.keys(payload).forEach(function (k) {
+      if (k !== &#x27;form&#x27;) lines.push((LABELS[k] || k) + &#x27;: &#x27; + payload[k]);
+    });
+    var who = payload.pet_name || payload.pet || &#x27;&#x27;;
+    window.location.href = &#x27;mailto:&#x27; + form.getAttribute(&#x27;data-mailto&#x27;) +
+      &#x27;?subject=&#x27; + encodeURIComponent(subject + &#x27; - &#x27; + who + &#x27; (&#x27; + payload.name + &#x27;)&#x27;) +
+      &#x27;&amp;body=&#x27; + encodeURIComponent(lines.join(&#x27;\n&#x27;));
+    if (success) success.style.display = &#x27;block&#x27;;
+  });
+})();
+&lt;/script&gt;
+</textarea>
+</section>
+  <section class="note" aria-labelledby="h-after">
+    <h2 id="h-after">After pasting</h2>
+    <ul>
+      <li><b>SEO:</b> in page Settings &gt; SEO Meta Data, set the title to <code>Pet Grooming in Long Beach, CA | Book an Appointment</code> and use this description: <i>Voted Long Beach&#x27;s best groomer seven times. Dog &amp; cat grooming at Los Altos, Tue-Sat 8-5. Book your Wags to Whiskers grooming appointment today.</i></li>
+      <li><b>Booking form:</b> requests open the visitor's email app addressed to eric@wagsgrooming.com. To capture leads in GoHighLevel, create a workflow with an <b>Inbound Webhook</b> trigger and paste its URL into <code>data-endpoint=""</code> on the <code>&lt;form id="booking-form"&gt;</code> tag in block 2.</li>
+      <li><b>Footer links</b> point to <code>/services</code>, <code>/about</code> and <code>/faq</code>. Change them in block 2 if your page paths differ.</li>
+      <li><b>Header:</b> the block has its own header and footer, so hide the funnel's default header and footer on this page if it has them.</li>
+    </ul>
+  </section>
+</main>
+<script>
+document.addEventListener('click', function (e) {
+  var b = e.target.closest('.copy'); if (!b) return;
+  var t = document.getElementById(b.dataset.target), label = b.textContent;
+  function ok() { b.textContent = 'Copied'; b.classList.add('done'); setTimeout(function () { b.textContent = label; b.classList.remove('done'); }, 1800); }
+  function fallback() { t.focus(); t.select(); try { if (document.execCommand('copy')) { ok(); return; } } catch (err) {} b.textContent = 'Selected: press Ctrl/Cmd+C'; }
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t.value).then(ok, fallback); else fallback();
+});
+</script>
+</body></html>
