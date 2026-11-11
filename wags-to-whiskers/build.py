@@ -10,22 +10,23 @@ import pathlib
 
 ROOT = pathlib.Path(__file__).parent
 
-# ---- Site settings: replace the TODO values before going live --------------
+# ---- Site settings (from wagsgrooming.com) ----------------------------------
 SITE = {
     "name": "Wags to Whiskers",
-    "tagline": "Pampered Pets, Happy Owners",
-    "url": "https://www.wagsgrooming.com",       # TODO: confirm live domain, no trailing slash
-    "email": "hello@wagsgrooming.com",           # TODO: lead inbox
-    "phone": "(555) 555-0123",                   # TODO: business phone
-    "phone_href": "+15555550123",                # TODO: same number, digits only
-    "street": "123 Main Street",                 # TODO: salon address
-    "city": "Your City",                         # TODO
-    "state": "ST",                               # TODO
-    "zip": "00000",                              # TODO
-    "hours": "Tue&ndash;Sat 8:00am&ndash;5:00pm",  # TODO: opening hours (display text)
-    "hours_schema": ["Tu-Sa 08:00-17:00"],      # TODO: same hours, schema.org format
+    "tagline": "Because We Love Pets",
+    "url": "https://www.wagsgrooming.com",
+    "email": "eric@wagsgrooming.com",
+    "phone": "(562) 430-5161",
+    "phone_href": "+15624305161",
+    "street": "5505 E Stearns St",
+    "location_note": "Los Altos Shopping Center, plenty of free parking",
+    "city": "Long Beach",
+    "state": "CA",
+    "zip": "90815",
+    "hours": "Tue&ndash;Sat 8:00am&ndash;5:00pm",
+    "hours_schema": ["Tu-Sa 08:00-17:00"],
     # Optional: form service / CRM webhook URL (Formspree, GoHighLevel, etc.).
-    # Empty = the booking form opens the visitor's email app pre-filled.
+    # Empty = the forms open the visitor's email app pre-filled.
     "form_endpoint": "",
 }
 
@@ -49,11 +50,33 @@ PAGES = [
 ]
 
 
+# Stand-alone ad / campaign landing page: own header (no menu), same footer and styles.
+LANDING = ("landing", "landing.html", "Book an Appointment",
+           "Pet Grooming in Long Beach, CA | Book an Appointment",
+           "Voted Long Beach's best groomer seven times. Dog & cat grooming at Los Altos, Tue-Sat 8-5. Book your Wags to Whiskers grooming appointment today.")
+
+
 def fill(text):
     for k, v in SITE.items():
         if isinstance(v, str):
             text = text.replace("{{" + k + "}}", v).replace("{" + k + "}", v)
     return text
+
+
+def landing_header():
+    return f"""<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Wags to Whiskers home">
+      <img src="assets/img/logo.svg" alt="Wags to Whiskers paw print logo" width="48" height="48">
+      <span class="brand-text"><span class="brand-name">Wags to Whiskers</span><span class="brand-tag">Pet Grooming</span></span>
+    </a>
+    <div class="header-actions">
+      <a class="header-phone" href="tel:{SITE['phone_href']}">{SITE['phone']}</a>
+      <a class="btn btn-cta" href="#book">Book Appointment</a>
+    </div>
+  </div>
+</header>"""
 
 
 def header(active):
@@ -88,13 +111,24 @@ def header(active):
 
 def footer(active):
     s = SITE
-    sticky = "" if active == "contact" else '<div class="mobile-cta"><a class="btn btn-cta" href="contact.html">Book a Free Consultation</a></div>'
+    if active == "landing":
+        blurb = f"Gentle, professional dog and cat grooming in {s['city']}. Voted best groomer in Long Beach seven times."
+        book_link = '<a href="#book">Book Appointment</a>'
+    else:
+        blurb = f"Gentle, professional dog and cat grooming in {s['city']}. Every visit starts with a free consultation."
+        book_link = '<a href="contact.html">Book a Free Consultation</a>'
+    if active == "contact":
+        sticky = ""
+    elif active == "landing":
+        sticky = '<div class="mobile-cta"><a class="btn btn-cta" href="#book">Book Appointment</a></div>'
+    else:
+        sticky = '<div class="mobile-cta"><a class="btn btn-cta" href="contact.html">Book a Free Consultation</a></div>'
     return f"""<footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div>
         <p class="footer-brand">Wags to Whiskers</p>
-        <p>Gentle, professional dog and cat grooming in {s['city']}. Every visit starts with a free consultation.</p>
+        <p>{blurb}</p>
       </div>
       <div>
         <h2>Services</h2>
@@ -110,7 +144,7 @@ def footer(active):
         <ul>
           <li><a href="about.html">About Us</a></li>
           <li><a href="faq.html">FAQ</a></li>
-          <li><a href="contact.html">Book a Free Consultation</a></li>
+          <li>{book_link}</li>
         </ul>
       </div>
       <div>
@@ -147,6 +181,7 @@ def business_schema():
         "email": s["email"],
         "telephone": s["phone_href"],
         "priceRange": "$$",
+        "areaServed": ["Long Beach, CA", "Orange County, CA"],
         "address": {
             "@type": "PostalAddress",
             "streetAddress": s["street"],
@@ -201,7 +236,7 @@ def render(slug, file, label, title, desc):
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
 <meta property="og:url" content="{canonical}">
-<meta property="og:image" content="{SITE['url']}/assets/img/logo.svg">
+<meta property="og:image" content="{SITE['url']}/assets/img/{'hero-dog-grooming.webp' if slug == 'landing' else 'logo.svg'}">
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#0f6e6e">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -212,7 +247,7 @@ def render(slug, file, label, title, desc):
 {ld}
 </head>
 <body>
-{header(slug)}
+{landing_header() if slug == "landing" else header(slug)}
 <main id="main">
 {body.strip()}
 </main>
@@ -223,18 +258,18 @@ def render(slug, file, label, title, desc):
 
 
 def main():
-    for page in PAGES:
+    for page in PAGES + [LANDING]:
         (ROOT / page[1]).write_text(render(*page))
     urls = "\n".join(
         f"  <url><loc>{SITE['url']}/{'' if p[1] == 'index.html' else p[1]}</loc>"
         f"<priority>{'1.0' if p[0] in ('index', 'contact') else '0.8'}</priority></url>"
-        for p in PAGES
+        for p in PAGES + [LANDING]
     )
     (ROOT / "sitemap.xml").write_text(
         f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}\n</urlset>\n'
     )
     (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE['url']}/sitemap.xml\n")
-    print("Built", len(PAGES), "pages")
+    print("Built", len(PAGES) + 1, "pages")
 
 
 if __name__ == "__main__":

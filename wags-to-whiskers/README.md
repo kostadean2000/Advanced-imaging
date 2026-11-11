@@ -4,8 +4,10 @@ Static 5-page lead-generation site for Wags to Whiskers, a dog and cat grooming 
 
 Pages: `index.html` (Home), `services.html`, `about.html`, `faq.html`, `contact.html` (free consultation booking form).
 
+**Landing page:** `landing.html` is a short, photo-led page for ads, social posts and QR codes. It has no menu, every button says **Book Appointment** and jumps to a short booking form, and its body lives in `pages/landing.html`.
+
 ## Before going live
-1. Open `build.py` and replace every `TODO` in the `SITE` block: domain, phone, email, street address, city, state, ZIP and hours.
+1. Business details in the `SITE` block of `build.py` come from wagsgrooming.com (5505 E Stearns St, Long Beach, CA 90815, (562) 430-5161, Tue-Sat 8-5). Check they're current.
 2. Search `pages/*.html` for `TODO` comments and add real details: the owner's story, groomer names and photos, real customer reviews, and the satisfaction policy wording.
 3. Run `python3 build.py` to regenerate the five pages, `sitemap.xml` and `robots.txt`.
 
@@ -22,3 +24,6 @@ Set `form_endpoint` in `build.py` to a form service or CRM webhook (Formspree, G
 Homepage calls to action: hero buttons (book + call), the hero card's "Claim My Free Consultation", "Schedule a Free Meet & Greet", "Start With Step One", and the closing CTA band. The header and the sticky mobile bar also link to booking.
 
 Deploy by uploading this folder to any static host (Netlify, GitHub Pages, etc.).
+
+## Photos
+Dog and cat photos in `assets/img/*.webp` are from Unsplash (free to use under the Unsplash License). Swap in your own salon photos any time, keeping the same file names.

@@ -25,25 +25,31 @@
   else setYear();
   window.addEventListener('load', setYear);
 
-  // Consultation form
+  // Lead forms (free consultation + book appointment)
   // To send submissions to an inbox or CRM, set the form's data-endpoint attribute
   // to a form service or webhook URL (Formspree, a GoHighLevel inbound webhook,
   // HubSpot, etc.). The fields are sent as JSON. Until then the form opens the
   // visitor's email app with the request pre-filled.
+  var LABELS = {
+    name: 'Owner name', email: 'Email', phone: 'Phone', pet: "Pet's name & breed",
+    pet_name: 'Pet name', pet_type: 'Pet type', breed: 'Breed / size', service: 'Service',
+    interest: 'Services of interest', preferred: 'Preferred day/time',
+    source: 'How did you hear about us', message: 'Notes'
+  };
   document.addEventListener('submit', function (e) {
     var form = e.target;
-    if (!form || form.id !== 'consult-form') return;
+    if (!form || !(form.id === 'consult-form' || form.classList.contains('js-lead-form'))) return;
     e.preventDefault();
     if (!form.reportValidity()) return;
     var data = new FormData(form);
-    var success = document.getElementById('form-success');
+    var success = form.querySelector('#form-success, .form-success');
     var endpoint = form.getAttribute('data-endpoint');
-    var interests = data.getAll('interest').join(', ') || 'Not specified';
+    var subject = form.getAttribute('data-subject') || 'Free Grooming Consultation';
+    var payload = {};
+    data.forEach(function (v, k) { payload[k] = payload[k] ? payload[k] + ', ' + v : v; });
+    payload.form = subject;
 
     if (endpoint) {
-      var payload = {};
-      data.forEach(function (v, k) { if (k !== 'interest') payload[k] = v; });
-      payload.interest = interests;
       fetch(endpoint, {
         method: 'POST',
         body: JSON.stringify(payload),
@@ -60,21 +66,13 @@
       return;
     }
 
-    var lines = [
-      'Owner name: ' + data.get('name'),
-      'Email: ' + data.get('email'),
-      'Phone: ' + data.get('phone'),
-      'Pet name: ' + data.get('pet_name'),
-      'Pet type: ' + data.get('pet_type'),
-      'Breed / size: ' + (data.get('breed') || ''),
-      'Services of interest: ' + interests,
-      'Preferred day/time: ' + (data.get('preferred') || ''),
-      'How did you hear about us: ' + (data.get('source') || ''),
-      '',
-      data.get('message') || ''
-    ];
+    var lines = [];
+    Object.keys(payload).forEach(function (k) {
+      if (k !== 'form') lines.push((LABELS[k] || k) + ': ' + payload[k]);
+    });
+    var who = payload.pet_name || payload.pet || '';
     window.location.href = 'mailto:' + form.getAttribute('data-mailto') +
-      '?subject=' + encodeURIComponent('Free Grooming Consultation - ' + data.get('pet_name') + ' (' + data.get('name') + ')') +
+      '?subject=' + encodeURIComponent(subject + ' - ' + who + ' (' + payload.name + ')') +
       '&body=' + encodeURIComponent(lines.join('\n'));
     if (success) success.style.display = 'block';
   });

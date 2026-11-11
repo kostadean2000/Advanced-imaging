@@ -160,3 +160,41 @@ address{font-style:normal}
   body{padding-bottom:72px}
   .hero{padding:56px 0 64px}
 }
+
+/* ---- Landing page ---- */
+.header-actions{display:flex;align-items:center;gap:16px}
+.header-phone{font-weight:700;text-decoration:none;color:var(--teal-dark)}
+.header-actions .btn{padding:10px 20px}
+.photo-bg{position:relative;background-color:var(--teal-dark);background-position:center;background-size:cover;background-repeat:no-repeat;isolation:isolate}
+.photo-bg::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(10,55,55,.88) 0%,rgba(10,55,55,.55) 55%,rgba(10,55,55,.25) 100%)}
+.lp-hero{color:#fff;padding:120px 0 130px}
+.lp-hero h1{color:#fff;max-width:620px}
+.lp-hero .lead{color:#e6f4f2;max-width:520px;font-size:1.25rem}
+.lp-hero .eyebrow{color:var(--sun)}
+.photo-card{border-radius:var(--radius);overflow:hidden;background:#fff;box-shadow:var(--shadow);border:1px solid var(--line)}
+.photo-card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.photo-card div{padding:18px 22px}
+.photo-card h3{margin-bottom:.2em}
+.photo-card p{margin:0;color:var(--muted)}
+.photo-band,.cta-photo{color:#fff;text-align:center;padding:96px 0}
+.photo-band::before{background:rgba(10,55,55,.72)}
+.cta-photo::before{background:rgba(8,40,42,.84)}
+.photo-band h2,.cta-photo h2{color:#fff}
+.cta-photo p{color:#e6f4f2;font-size:1.1rem}
+.pill-list{list-style:none;padding:0;margin:24px 0 0;display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.pill-list li{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:10px 20px;font-weight:700;backdrop-filter:blur(4px)}
+.photo-soft{padding:96px 0}
+.photo-soft::before{background:linear-gradient(90deg,rgba(255,248,239,.15),rgba(10,55,55,.45))}
+.book-card{max-width:620px;margin-left:auto;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.form-success{display:none;background:var(--teal-soft);border-radius:12px;padding:16px;margin-top:16px;font-weight:700}
+@media (max-width:760px){
+  .header-phone{display:none}
+  .header-actions .btn{white-space:nowrap;padding:9px 14px;font-size:.9rem}
+  .brand img{width:40px;height:40px}
+  .brand-name{font-size:1.1rem;white-space:nowrap}
+  .lp-hero{padding:72px 0 80px}
+  .photo-bg::before{background:rgba(10,55,55,.78)}
+  .photo-soft::before{background:rgba(10,55,55,.35)}
+  .photo-band,.cta-photo,.photo-soft{padding:64px 0}
+}
+@media (max-width:480px){.header-actions{display:none}}

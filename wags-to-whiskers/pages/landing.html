@@ -1,0 +1,97 @@
+<section class="lp-hero photo-bg" style="background-image:url(assets/img/hero-dog-grooming.webp)" aria-labelledby="hero-title">
+  <div class="container lp-hero-inner">
+    <span class="eyebrow">Voted Best Groomer in Long Beach &bull; 7 Times</span>
+    <h1 id="hero-title">Pet Grooming in Long Beach Your Pet Will Love</h1>
+    <p class="lead">Gentle, expert grooming for dogs and cats. Happy pets, every visit.</p>
+    <div class="actions">
+      <a class="btn btn-cta" href="#book">Book Appointment</a>
+      <a class="btn btn-light" href="tel:{{phone_href}}">Call {{phone}}</a>
+    </div>
+  </div>
+</section>
+
+<div class="trust" aria-label="Highlights">
+  <div class="container">
+    <ul>
+      <li>&#9733; Voted #1 in Long Beach, 7&times;</li>
+      <li>Dogs &amp; Cats</li>
+      <li>Tue&ndash;Sat 8&ndash;5</li>
+      <li>Free Parking</li>
+    </ul>
+  </div>
+</div>
+
+<section aria-labelledby="services-title">
+  <div class="container">
+    <div class="section-head center">
+      <h2 id="services-title">Dog &amp; Cat Grooming Services</h2>
+    </div>
+    <div class="grid grid-3">
+      <article class="photo-card">
+        <img src="assets/img/dog-beagle.webp" alt="Happy beagle after a dog grooming appointment" width="800" height="600" loading="lazy">
+        <div><h3>Dog Grooming</h3><p>Bath, haircut, nails &amp; ears.</p></div>
+      </article>
+      <article class="photo-card">
+        <img src="assets/img/cat-tabby.webp" alt="Tabby cat with a clean, groomed coat" width="800" height="800" loading="lazy">
+        <div><h3>Cat Grooming</h3><p>Calm, gentle, low-stress care.</p></div>
+      </article>
+      <article class="photo-card">
+        <img src="assets/img/puppy-corgi.webp" alt="Corgi puppy ready for its first grooming visit" width="800" height="1207" loading="lazy">
+        <div><h3>Puppy &amp; Kitten Grooms</h3><p>A positive first visit.</p></div>
+      </article>
+    </div>
+    <div class="actions" style="justify-content:center">
+      <a class="btn btn-cta" href="#book">Book Appointment</a>
+    </div>
+  </div>
+</section>
+
+<section class="photo-bg photo-band" style="background-image:url(assets/img/dogs-running.webp)" aria-labelledby="why-title">
+  <div class="container">
+    <h2 id="why-title">Why Long Beach Pet Parents Choose Us</h2>
+    <ul class="pill-list">
+      <li>Friendly, experienced groomers</li>
+      <li>Pet-safe shampoos</li>
+      <li>All breeds &amp; sizes</li>
+      <li>Easy parking at Los Altos</li>
+    </ul>
+    <div class="actions" style="justify-content:center">
+      <a class="btn btn-cta" href="#book">Book Appointment</a>
+    </div>
+  </div>
+</section>
+
+<section id="book" class="photo-bg photo-soft" style="background-image:url(assets/img/cat-window.webp)" aria-labelledby="book-title">
+  <div class="container">
+    <div class="card book-card">
+      <h2 id="book-title">Book Your Grooming Appointment</h2>
+      <p>Send a request and we'll call to confirm your time.</p>
+      <form id="booking-form" class="js-lead-form" data-subject="Grooming Appointment Request" data-mailto="{{email}}" data-endpoint="{{form_endpoint}}" novalidate>
+        <div class="form-grid">
+          <div><label for="b-name">Your name *</label><input id="b-name" name="name" autocomplete="name" required></div>
+          <div><label for="b-phone">Phone *</label><input id="b-phone" name="phone" type="tel" autocomplete="tel" required></div>
+          <div><label for="b-pet">Pet's name &amp; breed *</label><input id="b-pet" name="pet" placeholder="e.g. Max, Shih Tzu" required></div>
+          <div><label for="b-type">Service *</label>
+            <select id="b-type" name="service" required>
+              <option value="">Choose one</option><option>Dog grooming</option><option>Cat grooming</option><option>Puppy / kitten groom</option><option>Bath only</option><option>Nail trim</option>
+            </select></div>
+          <div class="full"><label for="b-day">Preferred day &amp; time</label><input id="b-day" name="preferred" placeholder="e.g. Saturday morning"></div>
+          <div class="full"><button class="btn btn-cta" type="submit" style="width:100%">Book Appointment</button></div>
+        </div>
+        <p class="form-note">Prefer to call? <a href="tel:{{phone_href}}">{{phone}}</a></p>
+        <p class="form-success" role="status">Thanks! We'll call you shortly to confirm your appointment.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="photo-bg cta-photo" style="background-image:url(assets/img/dog-pug.webp)" aria-labelledby="visit-title">
+  <div class="container">
+    <h2 id="visit-title">Visit Us at Los Altos Shopping Center</h2>
+    <p>{{street}}, {{city}}, {{state}} {{zip}} &bull; {{hours}}</p>
+    <div class="actions" style="justify-content:center">
+      <a class="btn btn-cta" href="#book">Book Appointment</a>
+      <a class="btn btn-light" href="https://www.google.com/maps/search/?api=1&amp;query=5505+E+Stearns+St+Long+Beach+CA+90815" target="_blank" rel="noopener">Get Directions</a>
+    </div>
+  </div>
+</section>
